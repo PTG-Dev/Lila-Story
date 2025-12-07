@@ -123,7 +123,7 @@ function LiveChat({ onReset, volume, setVolume }) {
           return (
             <div key={index} className={`live-message ${msg.from}`}>
               <img 
-                src={estLila ? './img/images.jpg' : './img/PTGblue.png'} 
+                src={estLila ? '/img/images.jpg' : '/img/PTGblue.png'} 
                 alt={msg.from} 
                 className="live-avatar"
               />
@@ -139,7 +139,7 @@ function LiveChat({ onReset, volume, setVolume }) {
 
         {lilaEcrit && (
           <div className="live-message lila">
-            <img src="./img/images.jpg" alt="lila" className="live-avatar" />
+            <img src="/img/images.jpg" alt="lila" className="live-avatar" />
             <div className="typing-indicator">
               <span></span>
               <span></span>
