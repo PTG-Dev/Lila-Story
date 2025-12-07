@@ -120,10 +120,11 @@ function LiveChat({ onReset, volume, setVolume }) {
       <div className="live-chat-messages">
         {messagesAffiches.map((msg, index) => {
           const estLila = msg.from === 'lila'
+          const baseUrl = import.meta.env.BASE_URL
           return (
             <div key={index} className={`live-message ${msg.from}`}>
               <img 
-                src={estLila ? 'img/images.jpg' : 'img/PTGblue.png'} 
+                src={`${baseUrl}img/${estLila ? 'images.jpg' : 'PTGblue.png'}`}
                 alt={msg.from} 
                 className="live-avatar"
               />
@@ -139,7 +140,7 @@ function LiveChat({ onReset, volume, setVolume }) {
 
         {lilaEcrit && (
           <div className="live-message lila">
-            <img src="img/images.jpg" alt="lila" className="live-avatar" />
+            <img src={`${import.meta.env.BASE_URL}img/images.jpg`} alt="lila" className="live-avatar" />
             <div className="typing-indicator">
               <span></span>
               <span></span>
