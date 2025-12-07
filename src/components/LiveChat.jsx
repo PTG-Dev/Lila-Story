@@ -123,10 +123,7 @@ function LiveChat({ onReset, volume, setVolume }) {
       <div className="live-chat-messages">
         {messagesAffiches.map((msg, index) => {
           const estLila = msg.from === 'lila'
-          // Force le chemin absolu avec le base URL
-          const imgSrc = estLila 
-            ? `${window.location.origin}${baseUrl}img/images.jpg`
-            : `${window.location.origin}${baseUrl}img/PTGblue.png`
+          const imgSrc = estLila ? '/Lila-Story/img/images.jpg' : '/Lila-Story/img/PTGblue.png'
           return (
             <div key={index} className={`live-message ${msg.from}`}>
               <img 
@@ -146,7 +143,7 @@ function LiveChat({ onReset, volume, setVolume }) {
 
         {lilaEcrit && (
           <div className="live-message lila">
-            <img src={`${window.location.origin}${baseUrl}img/images.jpg`} alt="lila" className="live-avatar" />
+            <img src="/Lila-Story/img/images.jpg" alt="lila" className="live-avatar" />
             <div className="typing-indicator">
               <span></span>
               <span></span>
