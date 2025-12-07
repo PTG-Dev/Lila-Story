@@ -1,7 +1,7 @@
 # Lila Story
 
 Une expérience interactive Discord-style racontant l'histoire d'une amitié qui se transforme en quelque chose de plus complexe.
-
+https://ptg-dev.github.io/Lila-Story/
 ## 🎭 Description
 
 Lila Story est une application web immersive qui simule une conversation Discord entre PTGDev et Lila, s'étalant sur 17 jours. L'histoire commence par une rencontre innocente sur Roblox et évolue vers une relation plus profonde, avant de prendre une tournure dramatique.
