@@ -1,3 +1,8 @@
+// This Part made By AI
+
+
+
+
 // Configuration centralisée pour les chemins d'assets
 export const config = {
   // Base URL pour GitHub Pages ou local
