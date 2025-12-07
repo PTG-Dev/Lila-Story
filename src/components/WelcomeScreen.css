@@ -1,0 +1,47 @@
+.welcome-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 40px;
+}
+
+.welcome-screen h1 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.welcome-screen p {
+  color: #b9bbbe;
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
+
+.start-button {
+  background-color: #5865f2;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+}
+
+.start-button:hover {
+  background-color: #4752c4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(88, 101, 242, 0.4);
+}
+
+.start-button:active {
+  transform: translateY(0);
+}

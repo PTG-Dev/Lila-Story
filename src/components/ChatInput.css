@@ -1,0 +1,68 @@
+.chat-input-container {
+  background-color: transparent;
+  padding: 0 16px 24px 16px;
+}
+
+.chat-input-form {
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: rgba(64, 68, 75, 0.4);
+  border-radius: 8px;
+  padding: 0 10px;
+  gap: 8px;
+}
+
+.plus-button {
+  background-color: #b9bbbe;
+  color: #36393f;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.plus-button:hover {
+  background-color: #dcddde;
+}
+
+.chat-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #dcddde;
+  font-size: 15px;
+  padding: 11px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-input::placeholder {
+  color: #72767d;
+}
+
+.input-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.input-icon {
+  color: #b9bbbe;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.input-icon:hover {
+  color: #dcddde;
+}
