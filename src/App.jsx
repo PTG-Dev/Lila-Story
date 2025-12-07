@@ -33,7 +33,7 @@ function App() {
     return (
       <>
         <audio ref={audioRef} loop>
-          <source src="/img/are you still taking the lithium_, tiktok audio.mp3" type="audio/mpeg" />
+          <source src="./img/are you still taking the lithium_, tiktok audio.mp3" type="audio/mpeg" />
         </audio>
         <IntroScreen onStart={demarrerExperience} />
       </>
@@ -43,7 +43,7 @@ function App() {
   return (
     <>
       <audio ref={audioRef} loop style={{ display: 'none' }}>
-        <source src="/img/are you still taking the lithium_, tiktok audio.mp3" type="audio/mpeg" />
+        <source src="./img/are you still taking the lithium_, tiktok audio.mp3" type="audio/mpeg" />
       </audio>
       <div className="app">
         <VideoBackground volume={volume} />
