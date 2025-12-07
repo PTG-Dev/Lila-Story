@@ -18,6 +18,8 @@ function LiveChat({ onReset, volume, setVolume }) {
   const jourData = firstMeetDays[jourActuel]
   const messageCourant = jourData?.messages[numeroMessage]
 
+  console.log('BASE_URL:', baseUrl) // Debug
+
   useEffect(() => {
     if (!messageCourant) {
       setJourTermine(true)
@@ -121,10 +123,14 @@ function LiveChat({ onReset, volume, setVolume }) {
       <div className="live-chat-messages">
         {messagesAffiches.map((msg, index) => {
           const estLila = msg.from === 'lila'
+          // Force le chemin absolu avec le base URL
+          const imgSrc = estLila 
+            ? `${window.location.origin}${baseUrl}img/images.jpg`
+            : `${window.location.origin}${baseUrl}img/PTGblue.png`
           return (
             <div key={index} className={`live-message ${msg.from}`}>
               <img 
-                src={`${baseUrl}img/${estLila ? 'images.jpg' : 'PTGblue.png'}`}
+                src={imgSrc}
                 alt={msg.from} 
                 className="live-avatar"
               />
@@ -140,7 +146,7 @@ function LiveChat({ onReset, volume, setVolume }) {
 
         {lilaEcrit && (
           <div className="live-message lila">
-            <img src={`${baseUrl}img/images.jpg`} alt="lila" className="live-avatar" />
+            <img src={`${window.location.origin}${baseUrl}img/images.jpg`} alt="lila" className="live-avatar" />
             <div className="typing-indicator">
               <span></span>
               <span></span>
