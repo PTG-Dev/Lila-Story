@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import VideoBackground from './components/VideoBackground'
 import ChatContainer from './components/ChatContainer'
 import IntroScreen from './components/IntroScreen'
+import { config } from './config'
 import './App.css'
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
     return (
       <>
         <audio ref={audioRef} loop>
-          <source src="img/are you still taking the lithium_, tiktok audio.mp3" type="audio/mpeg" />
+          <source src={config.assets.audio.background} type="audio/mpeg" />
         </audio>
         <IntroScreen onStart={demarrerExperience} />
       </>
@@ -43,7 +44,7 @@ function App() {
   return (
     <>
       <audio ref={audioRef} loop style={{ display: 'none' }}>
-        <source src="img/are you still taking the lithium_, tiktok audio.mp3" type="audio/mpeg" />
+        <source src={config.assets.audio.background} type="audio/mpeg" />
       </audio>
       <div className="app">
         <VideoBackground volume={volume} />

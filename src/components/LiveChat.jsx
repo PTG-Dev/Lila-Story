@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { firstMeetDays } from '../data/firstMeetMessages'
+import { config } from '../config'
 import DayTransition from './DayTransition'
 import './LiveChat.css'
 
@@ -14,11 +15,10 @@ function LiveChat({ onReset, volume, setVolume }) {
   const [afficherVolume, setAfficherVolume] = useState(false)
   const refScroll = useRef(null)
 
-  const baseUrl = import.meta.env.BASE_URL
   const jourData = firstMeetDays[jourActuel]
   const messageCourant = jourData?.messages[numeroMessage]
 
-  console.log('BASE_URL:', baseUrl) // Debug
+  console.log('BASE_URL:', config.baseUrl) // Debug
 
   useEffect(() => {
     if (!messageCourant) {
@@ -123,7 +123,7 @@ function LiveChat({ onReset, volume, setVolume }) {
       <div className="live-chat-messages">
         {messagesAffiches.map((msg, index) => {
           const estLila = msg.from === 'lila'
-          const imgSrc = estLila ? '/Lila-Story/img/images.jpg' : '/Lila-Story/img/PTGblue.png'
+          const imgSrc = estLila ? config.assets.avatars.lila : config.assets.avatars.ptgdev
           return (
             <div key={index} className={`live-message ${msg.from}`}>
               <img 
@@ -143,7 +143,7 @@ function LiveChat({ onReset, volume, setVolume }) {
 
         {lilaEcrit && (
           <div className="live-message lila">
-            <img src="/Lila-Story/img/images.jpg" alt="lila" className="live-avatar" />
+            <img src={config.assets.avatars.lila} alt="lila" className="live-avatar" />
             <div className="typing-indicator">
               <span></span>
               <span></span>
